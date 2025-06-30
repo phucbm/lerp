@@ -1,0 +1,63 @@
+{
+  "name": "@phucbm/lerp",
+  "version": "1.0.0",
+  "description": "A lightweight TypeScript utility function for linear interpolation",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsup",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lerp",
+    "linear-interpolation",
+    "animation",
+    "easing",
+    "typescript",
+    "utility",
+    "math"
+  ],
+  "author": {
+    "name": "phucbm",
+    "url": "https://github.com/phucbm"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phucbm/lerp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phucbm/lerp/issues"
+  },
+  "homepage": "https://github.com/phucbm/lerp#readme",
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "sideEffects": false
+}
