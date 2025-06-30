@@ -4,7 +4,10 @@ A lightweight TypeScript utility function for linear interpolation.
 
 [![npm version](https://badgen.net/npm/v/@phucbm/lerp?icon=npm)](https://www.npmjs.com/package/@phucbm/lerp)
 [![npm downloads](https://badgen.net/npm/dm/@phucbm/lerp?icon=npm)](https://www.npmjs.com/package/@phucbm/lerp)
-[![license](https://badgen.net/github/license/phucbm/lerp?icon=github)](https://github.com/phucbm/lerp/blob/main/LICENSE)
+[![npm dependents](https://badgen.net/npm/dependents/@phucbm/lerp?icon=npm)](https://www.npmjs.com/package/@phucbm/lerp)
+[![github stars](https://badgen.net/github/stars/phucbm/lerp?icon=github)](https://github.com/phucbm/lerp/)
+[![github license](https://badgen.net/github/license/phucbm/lerp?icon=github)](https://github.com/phucbm/lerp/blob/main/LICENSE)
+[![Made in Vietnam](https://raw.githubusercontent.com/webuild-community/badge/master/svg/made.svg)](https://webuild.community)
 
 ## Installation
 
