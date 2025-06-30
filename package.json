@@ -1,6 +1,6 @@
 {
   "name": "@phucbm/lerp",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A lightweight TypeScript utility function for linear interpolation",
   "type": "module",
   "main": "dist/index.js",
