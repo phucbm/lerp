@@ -12,7 +12,10 @@ A lightweight TypeScript utility function for linear interpolation.
 ## Installation
 
 ```bash
-npm install @phucbm/lerp
+npm i @phucbm/lerp
+```
+```bash
+pnpm add @phucbm/lerp
 ```
 
 ## Usage
