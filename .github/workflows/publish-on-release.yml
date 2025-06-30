@@ -1,8 +1,8 @@
-name: Publish on Release
+name: Publish on Release v1.0.0
 
 on:
   release:
-    types: [published]  # Triggers when you publish a release through GitHub UI
+    types: [ published ]  # Triggers when you publish a release through GitHub UI
 
 permissions:
   contents: write  # To push updated files back to main
@@ -35,6 +35,32 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
+
+      - name: Check if test script exists
+        id: check_test
+        run: |
+          # Check if test script exists in package.json
+          TEST_SCRIPT=$(node -p "
+            try {
+              const pkg = require('./package.json');
+              pkg.scripts && pkg.scripts.test && pkg.scripts.test !== 'echo \"Error: no test specified\" && exit 1' ? 'true' : 'false';
+            } catch (e) {
+              'false';
+            }
+          ")
+          echo "has_test=${TEST_SCRIPT}" >> $GITHUB_OUTPUT
+          echo "📋 Test script available: ${TEST_SCRIPT}"
+
+      - name: Run tests
+        if: steps.check_test.outputs.has_test == 'true'
+        run: |
+          echo "🧪 Running tests..."
+          pnpm test
+          echo "✅ All tests passed"
+
+      - name: Skip tests
+        if: steps.check_test.outputs.has_test == 'false'
+        run: echo "⏭️ No test script found, skipping tests"
 
       - name: Extract version and package info
         id: package_info
