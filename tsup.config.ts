@@ -1,12 +1,6 @@
 import {defineConfig} from 'tsup';
 import pkg from './package.json';
-
-const banner = `/*!
- * ${pkg.name} v${pkg.version}
- * ${pkg.description}
- * @license ${pkg.license}
- */
-`;
+import {generateBanner} from "@phucbm/banner";
 
 export default defineConfig([
     // ESM build
@@ -17,12 +11,12 @@ export default defineConfig([
         target: 'es2020',
         platform: 'neutral',
         bundle: true,
-        minify: false,
+        minify: true,
         sourcemap: true,
         dts: true,
         clean: true,
         outExtension: () => ({js: '.js'}),
-        banner: {js: banner},
+        banner: {js: generateBanner()},
         onSuccess: async () => {
             console.log('✅ ESM build completed');
             console.log(`\n🎉 ${pkg.description} v${pkg.version} - Build completed successfully!\n`);
