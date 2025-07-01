@@ -41,6 +41,7 @@
   },
   "homepage": "https://github.com/phucbm/lerp#readme",
   "devDependencies": {
+    "@phucbm/banner": "v0.0.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^24.0.3",
     "jest": "^29.7.0",
