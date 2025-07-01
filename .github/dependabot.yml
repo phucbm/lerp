@@ -30,17 +30,18 @@ updates:
     # assignees:
     #   - "username1"
     #   - "username2"
-    # reviewers:
-    #   - "username1"
-    #   - "username2"
+
+    reviewers:
+      - "phucbm"
+
     # # Team reviewers (for organizations)
     # reviewers:
     #   - "my-org/team-name"
 
     # # Labels to add to PRs
-    # labels:
-    #   - "dependencies"
-    #   - "javascript"
+    labels:
+      - "dependencies"
+      - "dependabot"
 
     # # Milestone to add to PRs
     # milestone: 4
