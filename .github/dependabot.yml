@@ -4,7 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "21:00"
+      time: "06:00"
       timezone: "Asia/Ho_Chi_Minh"  # GMT+7 (Hanoi/Vietnam timezone)
       # time: "04:00"  # Time of day to check (UTC, format: "hh:mm")
       # day: "monday"  # Only for weekly schedule
@@ -31,17 +31,17 @@ updates:
     #   - "username1"
     #   - "username2"
 
-    reviewers:
-      - "phucbm"
+    # reviewers:
+    #   - "phucbm"
 
     # # Team reviewers (for organizations)
     # reviewers:
     #   - "my-org/team-name"
 
     # # Labels to add to PRs
-    labels:
-      - "dependencies"
-      - "dependabot"
+    # labels:
+    #  - "dependencies"
+    #  - "dependabot"
 
     # # Milestone to add to PRs
     # milestone: 4
