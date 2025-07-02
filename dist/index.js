@@ -1,17 +1,9 @@
 /*!
- * @phucbm/lerp v1.0.0
- * A lightweight TypeScript utility function for linear interpolation
+ * @phucbm/lerp 1.0.1
+ * https://github.com/phucbm/lerp#readme
+ *
  * @license MIT
+ * @author: phucbm, https://github.com/phucbm
  */
-
-
-// src/index.ts
-function lerp(start, end, fraction = 0.1) {
-  return start * (1 - fraction) + end * fraction;
-}
-var index_default = lerp;
-export {
-  index_default as default,
-  lerp
-};
+function n(r,u,e=.1){return r*(1-e)+u*e}var b=n;export{b as default,n as lerp};
 //# sourceMappingURL=index.js.map
